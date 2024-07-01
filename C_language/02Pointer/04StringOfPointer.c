@@ -6,7 +6,7 @@ void main(){
 	
 	char *p;
 	p = &name;
-	
+//	printf("%c", *p);
 	for(i=0; name[i]!=NULL; i++){
 		printf("For Name =>  Value is %c and Address is %u\n", *(p+i), (p+i));
 	}

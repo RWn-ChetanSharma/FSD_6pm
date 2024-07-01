@@ -9,12 +9,12 @@ void main(){
 	 
 	 p = &a;
 	 
-	 printf("for a => Value is %d and Address is %u", *p, p);
+//	 printf("for a => Value is %d and Address is %u", *p, p);
 	
 //	printf("%p\n", &a);   // It shows the address in normal memory location
 //	printf("%u\n", &a);	 // It shows the address in Integer 
 //	printf("%d\n", a);   // It shows the value 
-	
+//	
 	
 //	sizeof()
 	

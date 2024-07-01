@@ -7,7 +7,7 @@ int main(){
 	int *p;
 	p = &a;
 	
-	
+//	printf("%d", *p);
 	for(i=0;i<=4;i++){
 		printf("For Array a[%d] => Value is %d and Address is %u\n", i, *(p+i), (p+i));
 	}
