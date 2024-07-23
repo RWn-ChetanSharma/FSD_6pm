@@ -2,14 +2,14 @@
 
 enum student
 {
-//	Jan, Feb, March
-	isLoggedOut, isLoggedIn
+	Jan, Feb, March
+//	isLoggedOut, isLoggedIn
 };
 
 main(){
 	
-	printf("%d", isLoggedIn);
-	
+//	printf("%d", isLoggedOut);
+	printf("%d", Feb);
 	
 	
 }

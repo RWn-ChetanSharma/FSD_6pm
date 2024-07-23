@@ -1,0 +1,1 @@
+console.log("Hey I'm In Head Section but in External file");

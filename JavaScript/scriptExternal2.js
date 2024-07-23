@@ -1,0 +1,1 @@
+console.log("Hey I'm In Body Section but in External file");
