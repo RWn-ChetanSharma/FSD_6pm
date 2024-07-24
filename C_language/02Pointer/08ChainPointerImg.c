@@ -13,11 +13,14 @@ void main(){
 	int ***ptr3;     // &8500
 	ptr3 = &ptr2;  // &8010
 	
+	int ****ptr4;  // &9010
+	ptr4 = &ptr3;   // &8500
+	
 	
 	printf("a => %u => %d\n", ptr1, *ptr1);
 	printf("ptr1 => %u => %u => %d\n", ptr2, *ptr2, **ptr2);
 	printf("ptr2 => %u => %u => %u => %d\n", ptr3, *ptr3, **ptr3, ***ptr3);
-	
+	printf("ptr2 => %u => %u => %u => %u => %d\n", ptr4, *ptr4, **ptr4, ***ptr4, ****ptr4);
 	
 }
 

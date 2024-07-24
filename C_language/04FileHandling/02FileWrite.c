@@ -18,7 +18,7 @@ void main(){
 	else{
 		printf("Success\n");
 		fputs("\n", p);
-		fputs("ishit", p);
+		fputs("Namaste Bharat", p);
 		fclose(p);		
 	}
 		

@@ -13,11 +13,11 @@ int main(){
 	}
 	
 	
-//	printf("For Array a => Value is %d and Address is %u\n", *(p+0), (p+0));
+//	printf("For Array a => Value is %d and Address is %u\n", *p, p);
 //	printf("For Array a => Value is %d and Address is %u\n", *(p+1), (p+1));
 //	printf("For Array a => Value is %d and Address is %u\n", *(p+2), (p+2));
 //	printf("For Array a => Value is %d and Address is %u\n", *(p+3), (p+3));
 //	printf("For Array a => Value is %d and Address is %u\n", *(p+4), (p+4));
-	
+//	
 	
 }
