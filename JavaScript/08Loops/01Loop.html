@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loop In JS</title>
+  </head>
+  <body>
+    <h1>Loop In JS</h1>
+
+    <script>
+      // Loop In JS
+
+      // Basic Loop
+
+      // for
+
+      const arr = ["red", "green", "yellow", "blue", "black", "orange"];
+
+      // for (let i = 0; i < arr.length; i++) {
+      //     // console.log(i);
+      //     console.log(arr[i]);
+      // }
+
+      // while
+
+      // let i = 0;
+      // while (i < arr.length) {
+      //     console.log(arr[i]);
+      //     i++;
+      // }
+
+      // do while
+
+      //   let i = 0;
+      //   do {
+      //     console.log(arr[i]);
+      //     i++;
+      //   } while (i < arr.length);
+
+      // Advance Loop
+
+      // for each
+
+      //   arr.forEach(element => {
+      //     console.log(element);
+      //   });
+
+      // for in
+
+      const myObj = {
+        id: 1,
+        name: "Rohan",
+        email: "rohan@google.com",
+        isLoggedIn: true,
+      };
+
+      for (const key in myObj) {
+        //   const element = myObj[key];
+        //   console.log(element);
+        //   console.log(myObj);
+        //   console.log(key);
+        console.log(myObj[key]);
+      }
+
+
+      // for of
+
+      for (const iterator of arr) {
+        console.log(iterator);
+      }
+    </script>
+  </body>
+</html>
