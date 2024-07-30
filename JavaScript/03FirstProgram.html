@@ -4,16 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>First Program In JS</title>
+    <style>
+        body{
+            background-color: tan;
+        }
+        #box{
+            /* background-color: crimson; */
+            border: 3px solid lime ;
+            font-size: 30px;
+            margin: 20px;
+
+        }
+    </style>
 </head>
 <body>
     <h1>First Program In JS</h1>
-
+    <div id="box"></div>
     <script>
         // First Program In JS
 
         console.log("Namaste Bharat");
-        alert("Namaste Bharat")
+        // alert("Namaste Bharat")
         document.write("Namaste Bharat")
+        document.getElementById("box").innerText = "<b>Namaste bharat</b>"
+        // document.getElementById("box").innerHTML = "<b>Namaste bharat</b>"
     </script>
 </body>
 </html>

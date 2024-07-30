@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1>Get HTML Data</h1>
+    <hr>
+
+    <input type="text" name="first" class="same" id="first" value="anything">
+    <br><br>
+    <input type="text" name="second" class="same" id="second">
+    <input type="text" name="second" class="same">
+    <input type="text" name="second" class="same" value="kuch value">
+    <input type="text" name="second" class="same">
+    <input type="text" name="second" class="same">
+
+    <script>
+        // Get HTML Data 
+
+        // 1. getElementById
+
+        // let inpData = document.getElementById("first")
+        // console.log(inpData);
+        // console.log(inpData.value);
+
+        // 2. getElementsByClassName
+
+        // let inpData = document.getElementsByClassName("same")
+        // console.log(inpData);
+        // console.log(inpData[0].value);
+
+
+        // 3. getElementsByName
+
+        // let inpData = document.getElementsByName("second")
+        // console.log(inpData);
+        // console.log(inpData[2].value);
+
+        // 4. getElementsByTagName
+
+        // let inpData = document.getElementsByTagName("input")
+        // console.log(inpData);
+        // console.log(inpData[3].value);
+
+
+        // 5. querySelector
+
+        // let inpData = document.querySelector(".same")
+        // console.log(inpData);
+        // console.log(inpData.value);
+
+        // 6. querySelectorAll
+
+        let inpData = document.querySelectorAll(".same")
+        console.log(inpData);
+        console.log(inpData[3].value);
+    </script>
+</body>
+</html>
