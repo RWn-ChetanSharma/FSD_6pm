@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS In JS</title>
+    <style>
+      div {
+        border: 2px solid lime;
+        height: 200px;
+        width: 200px;
+      }
+      body {
+        background-color: violet;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box">
+      <h1>CSS In JS</h1>
+    </div>
+    <hr />
+    <button onclick="handleEvent()">Click me</button>
+    <!-- <input oninput="handleEvent()" /> -->
+    <script>
+      const box = document.getElementById("box");
+      function handleEvent() {
+        box.style.backgroundColor = "crimson";
+        box.style.color = "white";
+      }
+    </script>
+  </body>
+</html>
