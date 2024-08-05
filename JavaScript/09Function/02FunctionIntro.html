@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function In JS</title>
+  </head>
+  <body>
+    <h1>Function In JS</h1>
+
+    <script>
+      // Function Declaration
+      greet();
+
+      function greet() {
+        console.log("Namaste Bharat");
+      }
+
+      // Calling a Function
+
+      // Function with parameters
+
+      //   while declaring a function we pass some parameters in it (para 1, para 2)
+
+      function sumOfNumber(a, b) {
+        let sum = parseInt(a + b);
+        console.log(sum);
+      }
+
+      //   while calling a function we pass some arguments in it (arg 1, arg 2)
+
+      sumOfNumber(4, 5);
+
+      //   Function return something
+
+      function myFunc() {
+        console.log("first");
+        return console.log("Return Something");
+        console.log("second"); // after return no code will excecuted
+      }
+      myFunc();
+
+      // Function Expression
+
+      // greetings();   //  Cannot access 'greetings' before initialization
+
+      const greetings = function () {
+        console.log("Good Morning");
+      };
+
+      greetings();
+
+
+      // Function Decalration are Hoisted but Function Expressions are not . 
+    </script>
+  </body>
+</html>
