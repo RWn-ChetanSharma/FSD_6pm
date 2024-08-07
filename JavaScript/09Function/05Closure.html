@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Closure In JS</title>
+  </head>
+  <body>
+    <h1>Closure In JS</h1>
+    <p>
+      A closure is the combination of a function bundled together (enclosed)
+      with references to its surrounding state (the lexical environment). In
+      other words, a closure gives you access to an outer function's scope from
+      an inner function. In JavaScript, closures are created every time a
+      function is created, at function creation time.
+    </p>
+
+    <p>
+      A function bundled together with its lexical environment makes a closure
+    </p>
+
+    <p>
+      What's much more interesting, a nested function can be returned: either as
+      a property of a new object or as a result by itself. It can then be used
+      somewhere else. No matter where, it still has access to the same outer
+      variables.
+    </p>
+
+    <script>
+        let c = 40
+      function outerOuter() {
+        let b = 30;
+        console.log(c);
+        
+        function outer() {
+          let a = 20;
+          console.log(b);
+
+          function inner() {
+            console.log(a);
+          }
+          inner();
+        }
+        outer();
+      }
+      outerOuter();
+    </script>
+  </body>
+</html>
