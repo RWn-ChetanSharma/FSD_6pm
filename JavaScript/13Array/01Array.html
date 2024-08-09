@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array in JS</title>
+  </head>
+  <body>
+    <h1>Array in JS</h1>
+
+    <script>
+      //   Array in JS;
+
+      let a = [10, 20, 30, 40, 50, 60, 80, 90];
+      console.log(a);
+
+      //   Methods Of Array
+
+      console.log(a.length);
+      console.log(a.push(100)); // Adds one or more elements to the end of an array, and returns the new length of the array.
+      console.log(a);
+      console.log(a.pop());
+      console.log(a.pop()); // Removes the last element from an array and returns that element.
+      console.log(a);
+      console.log(a.shift()); // Removes the first element from an array and returns that element.
+      console.log(a);
+      console.log(a.unshift(200)); // Adds one or more elements to the front of an array, and returns the new length of the array.
+      console.log(a);
+      console.log(a.slice(2, 4)); // Extracts a section of the calling array and returns a new array.
+      console.log(a);
+      //   console.log(a.splice(2,4));
+      //   console.log(a);
+      console.log(a.splice(2, 4, "Hello")); // Adds and/or removes elements from an array.
+      console.log(a);
+
+      // a.forEach(element => {
+      //   console.log(element);
+
+      // });
+
+      console.log(a.reverse());
+      console.log(a.toString());
+      
+      
+    </script>
+  </body>
+</html>
