@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text" placeholder="Enter Name" id="name" onblur="checkName()">
+        <span id="error"></span>
+        <input type="email" id="email" placeholder="enter email" oninput="checkEmail()">
+        <span id="error2"></span>
+    </form>
+    <script>
+        let name = document.getElementById("name");
+        let email = document.getElementById("email");
+        let span = document.getElementById("error")
+        let span2 = document.getElementById("error2")
+
+        function checkName(){
+            if(name.value ==""){
+                span.innerText="name feild is empty";
+                span.style.color = "red"
+            }else if (name.value.length <8){
+                alert("name is too short, must contain 8 letters")
+            }
+        }
+
+        function checkEmail(){
+            let a = "@"
+            if(email.value.includes(a)){
+                span2.innerText ="verified"
+            }
+        }
+
+    </script>
+</body>
+</html>
