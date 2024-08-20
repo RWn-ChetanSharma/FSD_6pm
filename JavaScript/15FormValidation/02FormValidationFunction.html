@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation Using Single Function</title>
+  </head>
+  <body style="background-color: black; color: aliceblue">
+    <h1>Form Validation Using Single Function</h1>
+    <hr />
+    <label>Name :- </label>
+    <input type="text" onblur="validateForm(this, 'error1', 'User Name')" />
+    <span id="error1"></span>
+    <br /><br />
+    <label>Password :- </label>
+    <input
+      type="password"
+      onblur="validateForm(this, 'error2', 'User Password')"
+    />
+    <span id="error2"></span>
+    <br /><br />
+    <label>Email :- </label>
+    <input type="email" onblur="validateForm(this, 'error3', 'User Email')" />
+    <span id="error3"></span>
+    <br /><br />
+    <label>Mobile :- </label>
+    <input type="number" onblur="validateForm(this, 'error4', 'User Mobile')" />
+    <span id="error4"></span>
+    <br /><br />
+
+    <script>
+      function validateForm(e, spnId, msg) {
+        console.log("Validate");
+        console.log(e);
+        if (e.value == "") {
+          console.log("Empty");
+          document.getElementById(spnId).innerText = `Required ${msg}`;
+          document.getElementById(spnId).style.backgroundColor = "Red";
+          document.getElementById(spnId).style.color = "white";
+
+          console.log(spnId);
+        } else {
+          console.log("Fullfilled");
+          document.getElementById(spnId).innerText = ``;
+
+        }
+      }
+
+
+     
+    </script>
+  </body>
+</html>

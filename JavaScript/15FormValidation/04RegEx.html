@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RegEx Form Validation</title>
+  </head>
+  <body>
+    <h1>RegEx Form Validation</h1>
+    <hr />
+    <input type="text" id="uname" oninput="checkAlpha(this, 'error1')" />
+    <span id="error1"></span>
+    <br /><br />
+    <input type="password" id="upass" oninput="checkPassword(this, 'error2')" />
+    <span id="error2"></span>
+    <br /><br />
+    <input type="email" id="uemail" oninput="checkEmail(this, 'error3')" />
+    <span id="error3"></span>
+    <br /><br />
+    <input type="mobile" id="umobile" oninput="checkNumber(this, 'error4')" />
+    <span id="error4"></span>
+
+    <hr />
+
+    <!-- Script Start from here  -->
+
+    <script>
+      // RegEx
+
+      function checkAlpha(a, spnId) {
+        let uname = /^[a-zA-Z]+$/;
+        if (uname.test(a.value)) {
+          document.getElementById(spnId).innerText = "";
+        } else {
+          document.getElementById(spnId).innerText = "Enter only Alphabets";
+          document.getElementById(spnId).style.color = "red";
+        }
+      }
+      function checkPassword(a, spnId) {
+        let upass = /^[a-zA-z0-9._@-]{3,5}$/;
+        if (upass.test(a.value)) {
+          document.getElementById(spnId).innerText = "";
+        } else {
+          document.getElementById(spnId).innerText = "Enter Valid Password";
+          document.getElementById(spnId).style.color = "red";
+        }
+      }
+      function checkEmail(a, spnId) {
+        let uemail = /^([a-z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z]{2,4})+$/;
+        if (uemail.test(a.value)) {
+          document.getElementById(spnId).innerText = "";
+        } else {
+          document.getElementById(spnId).innerText = "Enter Valid Email";
+          document.getElementById(spnId).style.color = "red";
+        }
+      }
+      function checkNumber(a, spnId) {
+        let umobile = /^[0-9]{10}$/;
+        if (umobile.test(a.value)) {
+          document.getElementById(spnId).innerText = "";
+        } else {
+          document.getElementById(spnId).innerText = "Enter Only Number";
+          document.getElementById(spnId).style.color = "red";
+        }
+      }
+    </script>
+  </body>
+</html>

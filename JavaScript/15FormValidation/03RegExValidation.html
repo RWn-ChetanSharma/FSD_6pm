@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation Using RegEx</title>
+  </head>
+  <body style="background-color: black; color: aliceblue">
+    <h1>Form Validation Using RegEx</h1>
+    <hr />
+    <form onsubmit="handleSubmit(this)">
+      <label>Name :- </label>
+      <input type="text" onfocus="validateForm(this)" />
+      <span id="error1"></span>
+      <br /><br />
+      <label>Password :- </label>
+      <input type="password" onfocus="validateForm(this)" />
+      <span id="error2"></span>
+      <br /><br />
+      <label>Email :- </label>
+      <input type="email" oninput="validateForm(this)" />
+      <span id="error3"></span>
+      <br /><br />
+      <label>Mobile :- </label>
+      <input type="number" onfocus="validateForm(this)" />
+      <span id="error4"></span>
+      <br /><br />
+
+      <hr />
+      <select name="course" id="course" onchange="changeColor(this, 'error5')">
+        <option value="WD">WD</option>
+        <option value="Python">Python</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="GoLang">GoLang</option>
+        <option value="Ruby">Ruby</option>
+      </select>
+      <span id="error5"></span>
+      <button type="submit">submit</button>
+    </form>
+    
+
+    <script>
+      // onFocus
+
+      function validateForm(e) {
+        e.style.backgroundColor = "khaki";
+      }
+
+      //   onChange
+
+      function changeColor(e, spnId) {
+        e.style.backgroundColor = "khaki";
+        document.getElementById(spnId).innerText = e.value;
+        document.getElementById(spnId).style.backgroundColor = "teal";
+      }
+
+      //   onsubmit
+
+      function handleSubmit(e) {
+        e.preventDefault()
+      }
+    </script>
+  </body>
+</html>
