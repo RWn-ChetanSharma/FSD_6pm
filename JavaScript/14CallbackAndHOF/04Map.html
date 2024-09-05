@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map In JS</title>
+  </head>
+  <body>
+    <h1>Map In JS</h1>
+
+    <script>
+      const radius = [1, 2, 3, 4, 5];
+
+      console.log(radius);
+
+      // Area
+
+      const area = (radius) => {
+        return Math.PI * radius * radius;
+      };
+      const circumference = (radius) => {
+        return 2 * Math.PI * radius;
+      };
+      const diameter = (radius) => {
+        return 2 * radius;
+      };
+
+      Array.prototype.calculate = (logic) => {
+        // const calculate = (radius, logic) => {
+        const output = [];
+        for (let i = 0; i < radius.length; i++) {
+          output.push(logic(radius[i]));
+        }
+        return output;
+      };
+
+
+      const output = radius.calculate(element => {
+        return element * element * Math.PI
+      });
+     
+      
+      console.log(output);
+      
+      
+      
+      // console.log(calculate(radius, area));
+      // console.log(calculate(radius, circumference));
+      // console.log(calculate(radius, diameter));
+
+
+
+      // Map in HOF 
+
+
+      const outputArea = radius.map(element => {
+        return element * element * Math.PI
+      });
+
+      console.log(outputArea);
+
+
+      // // Filter In HOF 
+
+      // const outputEven = radius.filter(element => {
+      //   return element % 2 === 0
+      // });
+
+      // console.log(outputEven);
+      
+      
+
+    
+    </script>
+  </body>
+</html>

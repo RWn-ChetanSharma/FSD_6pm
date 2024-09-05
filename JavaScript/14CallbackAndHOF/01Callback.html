@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Callback In JS</title>
+  </head>
+  <body>
+    <h1>Callback In JS</h1>
+    <p>Functions are the heart of JavaScript.</p>
+    <p>A function passed as an argument to another function is called Callback function.</p>
+
+    <script>
+      // Synchronous JavaScript
+
+      //   console.log("one");
+      //   console.log("Two");
+      //   console.log("Three");
+
+      // Asynchronous JavaScript
+
+      //   console.log("one");
+      //   console.log("Two");
+      //   setTimeout(() => {
+      //     console.log("Namaste Bharat");
+      //   }, 2000);
+      //   console.log("Three");
+
+
+    //   Callback Function 
+
+
+
+    function a() {                 // Callback Function
+        console.log("a");
+    }
+    
+    function b(a) {                // HOF Function
+        a()
+        console.log("b");
+        
+    }
+    // b(a)                          
+    b(function a() {
+        console.log("a");
+    });
+
+
+
+
+
+    </script>
+  </body>
+</html>

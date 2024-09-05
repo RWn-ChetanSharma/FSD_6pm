@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOF in JS</title>
+</head>
+<body>
+    <h1>HOF in JS</h1>
+    <p>A function takes one or more function as an argumemts is called Higher Order Function.</p>
+
+
+
+    <script>
+
+        const radius = [1,2,3,4,5];
+
+        console.log(radius);
+
+        // Area 
+        
+        const calculateArea = () => {
+            const output = []
+            for (let i = 0; i < radius.length; i++) {
+                output.push(Math.PI * radius[i] * radius[i])
+            }
+            return output
+        }
+
+
+        // Circumference 
+
+        const calculateCircumference = () => {
+            const output = []
+            for (let i = 0; i < radius.length; i++) {
+                output.push(2 * Math.PI * radius[i])
+            }
+            return output
+        }
+
+        // Diameter 
+
+        const calculateDiameter = () => {
+            const output = []
+            for (let i = 0; i < radius.length; i++) {
+                output.push(2 * radius[i])
+            }
+            return output
+        }
+        
+
+        console.log(calculateArea());
+        console.log(calculateCircumference());
+        console.log(calculateDiameter());
+        
+
+
+        // DRY => Don't Repeat YourSelf
+    </script>
+</body>
+</html>
