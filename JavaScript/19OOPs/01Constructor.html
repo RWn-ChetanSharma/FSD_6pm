@@ -23,6 +23,8 @@
     </p>
 
     <hr />
+
+    <!-- Bank Account -->
     <div class="container text-bg-dark p-5">
       <form id="accountForm">
         <div class="col">
@@ -35,9 +37,9 @@
           />
         </div>
         <div class="col">
-          <label>Customer Name</label>
+          <label>Amount</label>
           <input
-            type="text"
+            type="number"
             class="form-control my-3"
             placeholder="Initial Balance"
             id="balance"
@@ -49,41 +51,89 @@
       </form>
     </div>
 
+    <!-- Deposit -->
+    <div class="container text-bg-success p-5 mt-5">
+      <form id="depositForm">
+        <div class="col">
+          <label>Account Number</label>
+          <input
+            type="number"
+            class="form-control my-3"
+            placeholder="Account Number"
+            id="accountNumber"
+          />
+        </div>
+        <div class="col">
+          <label>Amount</label>
+          <input
+            type="number"
+            class="form-control my-3"
+            placeholder="Deposit Balance"
+            id="amount"
+          />
+        </div>
+        <div class="col">
+          <button class="btn btn-primary my-4">Create Account</button>
+        </div>
+      </form>
+    </div>
+
     <script>
       function BankAccount(customerName, balance = 0) {
         this.customerName = customerName;
+        this.accountNumber = Date.now();
         this.balance = balance;
 
         this.deposit = (amount) => {
-          this.balance = this.balance + amount;
+          this.balance = +this.balance + amount;
         };
+      
+        
         this.withdraw = (amount) => {
           this.balance = this.balance - amount;
         };
       }
-      const vanshAccount = new BankAccount("vansh", 5000);
-      const ishitAccount = new BankAccount("Ishit");
+      // const vanshAccount = new BankAccount("vansh", 5000);
+      // const ishitAccount = new BankAccount("Ishit");
 
-      ishitAccount.deposit(500);
-      vanshAccount.withdraw(500);
-      //   vanshAccount.balance = 0
-    //   console.log(vanshAccount);
-    //   console.log(ishitAccount);
+      // ishitAccount.deposit(500);
+      // vanshAccount.withdraw(500);
+      // vanshAccount.balance = 0
+      // console.log(vanshAccount);
+      // console.log(ishitAccount);
+
+      // Create Account
 
       const accountForm = document.querySelector("#accountForm");
       const customerName = document.querySelector("#customerName");
       const balance = document.querySelector("#balance");
 
-
-
-      const accounts = []
+      const accounts = [];
 
       accountForm.addEventListener("submit", (e) => {
         e.preventDefault();
         const account = new BankAccount(customerName.value, balance.value);
-        accounts.push(account)
+        accounts.push(account);
         console.log(accounts);
+      });
+
+      // Deposit
+
+      const depositForm = document.querySelector("#depositForm");
+      const accountNumber = document.querySelector("#accountNumber");
+      const amount = document.querySelector("#amount");
+
+      depositForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const account = accounts.find(
+          (account) => (account.accountNumber === +accountNumber.value)
+        );
+        account.deposit(+amount.value)
+        console.log(+accountNumber.value);
+        console.log(+amount.value);
         
+        console.log(accounts);
         
       });
     </script>
