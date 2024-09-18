@@ -1,0 +1,22 @@
+{"users":[
+  {
+      "id": 1,
+      "name": "Harsh",
+      "email": "harsh@gmail.com"
+  },
+  {
+      "id": 2,
+      "name": "Nishit",
+      "email": "nishit@gmail.com"
+  },
+  {
+      "id": 3,
+      "name": "Manav",
+      "email": "manav@gmail.com"
+  },
+  {
+      "id": 4,
+      "name": "Nikunj",
+      "email": "nikunj@gmail.com"
+  }
+]}

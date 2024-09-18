@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classes</title>
+  </head>
+  <body>
+    <script>
+      // Introduced In ES6 JavaScript
+
+      class BankAccount {
+        customerName;
+        balance;
+        accountNumber;
+
+        constructor(customerName, balance = 0) {
+          this.customerName = customerName;
+          this.balance = balance;
+          this.accountNumber = Date.now();
+        }
+        deposit(amount) {
+          this.balance += amount;
+        }
+        withdraw(amount) {
+          this.balance -= amount;
+        }
+      }
+
+      const vinitAccount = new BankAccount("Vinit", 2000);
+      const anshuAccount = new BankAccount("Anshu", 3000);
+
+      console.log(vinitAccount);
+      console.log(anshuAccount);
+      vinitAccount.deposit(200);
+      anshuAccount.withdraw(200);
+    </script>
+  </body>
+</html>

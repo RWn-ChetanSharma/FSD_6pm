@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prototype</title>
+  </head>
+  <body>
+    <h1>Prototype</h1>
+    <p>
+      In JavaScript, a prototype is an object that contains properties and
+      methods that are shared by all instances of a particular object. It's a
+      reference to another object that's used when a property or method is
+      called on an object
+    </p>
+
+    <script>
+      function BankAccount(customerName, balance = 0) {
+        this.customerName = customerName;
+        this.accountNumber = Date.now();
+        this.balance = balance;
+
+        BankAccount.prototype.deposit = (amount) => {
+          this.balance = this.balance + amount;
+        };
+
+        BankAccount.prototype.withdraw = (amount) => {
+          this.balance = this.balance - amount;
+        };
+      }
+
+      const vinitAccount = new BankAccount("Vinit", 5000);
+      const anshuAccount = new BankAccount("Anshu", 4000);
+
+      console.log(vinitAccount, anshuAccount);
+
+     anshuAccount.deposit(200);
+
+    </script>
+  </body>
+</html>
