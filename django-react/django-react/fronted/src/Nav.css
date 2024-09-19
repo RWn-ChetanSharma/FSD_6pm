@@ -1,0 +1,115 @@
+/* Top bar */
+.n-container{
+width: 100vw; /* Full width of the viewport */
+    max-width: 100%; /* Ensures it doesn’t shrink below the viewport */
+    padding: 0;
+    margin: 0;
+}
+
+
+.navbar-top {
+  display: flex;
+  justify-content: space-between;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.navbar-top-links a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+.navbar-top-links a:hover {
+  text-decoration: underline;
+}
+
+/* Bottom bar with logo, search, and icons */
+.navbar-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.navbar-logo h2 {
+  font-size: 24px;
+  color: #4e535f;
+}
+
+.navbar-search {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-search select {
+  padding: 8px;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.navbar-search input {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.navbar-icons a {
+  color: #4e535f;
+  text-decoration: none;
+  margin-left: 20px;
+  
+}
+
+.navbar-icons a:hover {
+  text-decoration: underline;
+  color: #6c7fd8;
+}
+
+/* Menu bar */
+.navbar-menu {
+  background-color: #f8f8f8;
+  padding: 10px 20px;/* Adjust this based on navbar height */
+}
+
+.navbar-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+}
+
+.navbar-menu ul li {
+  display: inline;
+}
+
+.navbar-menu ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+.navbar-menu ul li a:hover {
+  color: #6c7fd8;
+  border-bottom: 2px solid #6c7fd8;
+}

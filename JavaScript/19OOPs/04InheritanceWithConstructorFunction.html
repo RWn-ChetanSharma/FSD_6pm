@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inheritance</title>
+  </head>
+  <body>
+    <h1>Inheritance</h1>
+    <p>
+      In programming, inheritance refers to passing down characteristics from a
+      parent to a child so that a new piece of code can reuse and build upon the
+      features of an existing one. JavaScript implements inheritance by using
+      objects.
+    </p>
+
+    <script>
+      function BankAccount(customerName, balance = 0) {
+        this.customerName = customerName;
+        this.accountNumber = Date.now();
+        this.balance = balance;
+      }
+
+      BankAccount.prototype.deposit = function (amount) {
+        this.balance += amount;
+      };
+
+      BankAccount.prototype.withdraw = function (amount) {
+        this.balance -= amount;
+      };
+
+      //   For Saving Account
+
+      function SavingAccount(customerName, balance = 0) {
+        BankAccount.call(this, customerName, balance);
+        this.transactionLimit = 20000;
+      }
+
+      SavingAccount.prototype.takingPersonalLoan = function (amount){
+        console.log(`Taking Personal Loan : `, amount);
+      };
+
+      //   For Current Account
+
+      function CurrentAccount(customerName, balance = 0) {
+        BankAccount.call(this, customerName, balance);
+        this.transactionLimit = 50000;
+      }
+
+      CurrentAccount.prototype.takingBusinessLoan = function (amount) {
+        console.log(`Taking Personal Loan : `, amount);
+      };
+
+
+
+      SavingAccount.prototype = Object.create(BankAccount.prototype)
+      CurrentAccount.prototype = Object.create(BankAccount.prototype)
+
+      const mitanAccount = new SavingAccount("Mitan", 2000);
+      mitanAccount.deposit(10000);
+      const parthAccount = new CurrentAccount("Mitan", 3000);
+
+      console.log(mitanAccount);
+      console.log(parthAccount);
+
+
+
+      
+    </script>
+  </body>
+</html>
