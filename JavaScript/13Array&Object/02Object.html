@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects In JS</title>
+  </head>
+  <body>
+    <h1>Objects In JS</h1>
+    <p>
+      In JavaScript, an object is a standalone entity, with properties and type.
+      Compare it with a cup, for example. A cup is an object, with properties. A
+      cup has a color, a design, weight, a material it is made of, etc
+    </p>
+    <script>
+      // Objects In JS
+
+      const MyDetails = {
+        name: "Parth",
+        age: 20,
+        isLoggedIn: true,
+      };
+
+    //   console.log(MyDetails);
+    //   console.log(typeof MyDetails);
+    //   console.log(MyDetails.name);
+    //   console.log(MyDetails.isLoggedIn);
+
+    //   MyDetails.name = "Rohan";
+    //   console.log(MyDetails);
+    //   MyDetails.name = "vinit";
+    //   console.log(MyDetails);
+
+    //   Object.freeze()
+      // Freezes an object. Other code cannot delete or change its properties.
+
+    //   Object.freeze(MyDetails);
+
+    //   MyDetails.name = "Rudra";
+    //   console.log(MyDetails);
+
+      const obj1 = { 1: "a", 2: "b" };
+      const obj2 = { 3: "c", 4: "d" };
+
+      console.log(obj1);
+      console.log(obj2);
+
+    //   console.log(obj1 + obj2);
+    //   console.log(typeof (obj1 + obj2));
+
+    //   console.log(obj1);
+
+      // Object.assign()
+      // Copies the values of all enumerable own properties from one or more source objects to a target object.
+
+      const obj3 = Object.assign({}, obj1, obj2);
+
+      console.log(obj3);
+      console.log(obj1);
+
+      console.log(obj2);
+
+    //   Object.prototype.hasOwnProperty()
+      // Returns a boolean indicating whether an object contains the specified property as
+      // a direct property of that object and not inherited through the prototype chain.
+
+      console.log(obj3.hasOwnProperty());
+
+    //   Object.keys()
+      // Returns an array containing the names of all of the given object's own enumerable string properties.
+      console.log(Object.keys(obj3));
+
+      // Object.values()
+      // Returns an array containing the values that correspond to all of a given object's own enumerable string properties.
+
+      console.log(Object.values(obj3));
+
+      // Object.create()
+      // Creates a new object with the specified prototype object and properties.
+
+      const obj4 = Object.create(obj3);
+      obj4.hobby = "Badminton";
+      obj4.contact = 21312121;
+      console.log(obj4);
+
+      // Object.prototype.toString()
+      // Returns a string representation of the object.
+
+      
+      console.log(obj3.toString());
+
+
+      console.log(Object.entries(obj3));
+    </script>
+  </body>
+</html>

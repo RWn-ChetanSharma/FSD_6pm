@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects with loop In JS</title>
+  </head>
+  <body>
+    <h1>Objects with loop In JS</h1>
+    <script>
+      // Objects with loop In JS
+
+      const MyDetails = {
+        name: "Nitin",
+        age: 20,
+        isLoggedIn: true,
+        contact: 123456,
+      };
+      const MyDetails2 = {
+        name: "Rahul",
+        age: 20,
+        isLoggedIn: false,
+      };
+      console.log(MyDetails, MyDetails2);
+      
+      const arr = [MyDetails, MyDetails2];
+      console.log(arr);
+
+        for (let i = 0; i < arr.length; i++) {
+          const element = arr[i];
+          console.log(element);
+        //   console.log(i);
+        // console.log(arr.MyDetails);   
+        
+    }
+    // console.log(arr[0].name);
+
+      const result = Object.keys(MyDetails).map((key) => [key, MyDetails[key]]);
+
+      console.log(result[0]);
+   
+
+
+      //   const obj = Object.assign({}, MyDetails, MyDetails2)
+
+      //   console.log(obj);
+
+        for (const key in MyDetails) {
+          if (Object.hasOwnProperty.call(MyDetails, key)) {
+              const element = MyDetails[key];
+              console.log(key);
+              console.log(element);
+              
+          }
+        }
+      
+
+
+    
+    </script>
+  </body>
+</html>

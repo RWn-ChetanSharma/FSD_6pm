@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object with function</title>
+  </head>
+  <body>
+    <h1>Object with function</h1>
+    <button onclick="userClick(myObj)">Click</button>
+    <script>
+      // Object with function
+
+      const myObj = {
+        id: 1,
+        name: "Rohan",
+        contact: 123456,
+        isLoggedIn: true,
+      };
+
+      function userClick(myObj) {
+        // console.log(myObj);
+        // console.log(myObj.id);
+        // console.log(myObj.name);
+        // console.log(myObj.contact);
+        // console.log(myObj.isLoggedIn);
+        // myObj.name = "Ritik";
+        // console.log(myObj.name);
+        if (myObj.isLoggedIn == false) {
+          myObj.isLoggedIn = true;
+        } else {
+          myObj.isLoggedIn = false;
+        }
+        console.log(myObj.isLoggedIn);
+      }
+    //   userClick(myObj);
+    </script>
+  </body>
+</html>
