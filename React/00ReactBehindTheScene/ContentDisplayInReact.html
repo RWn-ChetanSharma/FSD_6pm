@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Content Display In React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- <div id="parent">
+            <div id="child">
+                <h1 id="greet1">Namaste From React</h1>
+                <h2 id="greet2">Namaste From React Dom</h2>
+            </div>
+          </div> 
+    -->
+
+    <!-- React CDN -->
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+
+    <script>
+      const ele = React.createElement(
+        "div",
+        { id: "parent" },
+        React.createElement(
+          "div",
+          { id: "child" },
+         [ React.createElement("h1", { id: "greet1" }, "Namaste from React"),  React.createElement("h2", { id: "greet2" }, "Namaste from React DOM")]
+        )
+      );
+
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+
+      root.render(ele);
+    </script>
+  </body>
+</html>
