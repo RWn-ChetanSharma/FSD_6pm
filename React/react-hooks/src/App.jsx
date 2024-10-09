@@ -1,16 +1,25 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Counter from "./components/Hooks/useState/Counter";
-import Form from "./components/Hooks/useState/Form";
+import CounterEffect from "./components/Hooks/useEffect/CounterEffect";
+import ProductData from "./components/Hooks/useEffect/ProductData";
 
 
 function App() {
+
+
+
   return (
     <>
       {/* useState  */}
 
-      <Counter />
-      <Form/>
+      {/* <Counter />
+      <Form/> */}
+
+
+      {/* useEffect  */}
+
+        <CounterEffect/>
+        <ProductData/>
+
     </>
   );
 }
